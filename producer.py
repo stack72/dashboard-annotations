@@ -27,9 +27,7 @@ class Producer():
             producer.send_messages('logs',applicationName,deploymentType,deploymentMessage,current_date.isoformat())
 
         except:
-            tb = traceback.format_exc()
-        finally:
-            print tb
+            print traceback.format_exc()
 
 if __name__ == "__main__":
     kafkaNodes = None;
